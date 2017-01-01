@@ -4,22 +4,22 @@ angular.module('willWin', ['ui.router', 'ui.materialize', 'angular.vertilize']).
     $locationProvider.hashPrefix('');
     $stateProvider.state('home', {
         url: '/',
-        templateUrl: "../views/home.html"
+        templateUrl: "/views/home.html"
     }).state('about', {
         url: '/about',
-        templateUrl: "../views/about.html",
+        templateUrl: "/views/about.html",
         controller: 'aboutCtrl'
     }).state('contact', {
         url: '/contact',
-        templateUrl: "../views/contact.html",
+        templateUrl: "/views/contact.html",
         controller: 'contactCtrl'
     }).state('services', {
         url: '/services',
-        templateUrl: "../views/services.html",
+        templateUrl: "/views/services.html",
         controller: 'serviceCtrl'
     }).state('facilities', {
         url: '/facilties',
-        templateUrl: "../views/facilities.html",
+        templateUrl: "/views/facilities.html",
         controller: "facilCtrl"
     });
 
