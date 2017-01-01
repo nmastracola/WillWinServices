@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html ng-app="willWin">
+  <head>
+    <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <link rel="stylesheet" href="/styles/main.css"/>
+    <title>WillWin Parent-Time Services</title>
+  </head>
+  <body>
+      <nav class="navbar blue darken-4">
+          <div class="nav-wrapper">
+              <a class="brand-logo center">
+                  <svg width="195" height="40" xmlns="http://www.w3.org/2000/svg" viewBox="0 -10 195 50">
+                         <g>
+                          <text fill="#ffffff" font-size="19" stroke-opacity="0" stroke="#000000" font-family="Roboto, sans-serif" x="51" id="svg_3" y="27">WillWin Services</text>
+                          <g stroke="null" id="svg_4">
+                           <ellipse stroke="#fff" fill="none" stroke-width="3.2" cx="17.20807" cy="16.29105" id="svg_1" rx="13.20807" ry="13.20807"/>
+                           <ellipse stroke="#fff" fill="none" stroke-width="3.2" cx="33.35214" cy="16.20807" id="svg_2" rx="13.20807" ry="13.20807"/>
+                           <ellipse stroke="#fff" fill="none" stroke-width="3.2" cx="25.61599" cy="24.13291" id="svg_5" rx="13.20807" ry="13.20807"/>
+                          </g>
+                         </g>
+                    </svg>
+              </a>
+              <a href="#" class="button-collapse" data-activates="mobile"  data-sidenav="left" data-menuwidth="250" data-closeonclick="false"><i class="material-icons">menu</i></a>
+              <ul class="right hide-on-med-and-down">
+                  <li ui-sref="home"><a>Home</a></li>
+                  <li ui-sref="services"><a>Services</a></li>
+                  <li ui-sref="facilities"><a>Facilities</a></li>
+                  <li ui-sref="about"><a>About</a></li>
+                  <li ui-sref="contact"><a>Contact</a></li>
+              </ul>
+              <ul class="side-nav" id="mobile">
+                  <li ui-sref="home"><a>Home</a></li>
+                  <li ui-sref="services"><a>Services</a></li>
+                  <li ui-sref="facilities"><a>Facilities</a></li>
+                  <li ui-sref="about"><a>About</a></li>
+                  <li ui-sref="contact"><a>Contact</a></li>
+              </ul>
+          </div>
+      </nav>
+  <main ui-view>
+  </main>
+      <footer class="page-footer blue darken-4">
+          <div class="container">
+              <div class="row">
+                  <div class="col l6 s12">
+                      <h5 class="white-text">Address</h5>
+                      <p>923 Executive Park Dr<br>
+                      Suite D<br>
+                      Murray, UT 84117</p>
+                      <p>(801) 281-0486</p>
+                  </div>
+                  <div class="col l4 offset-l2 s12">
+                      <h5 class="white-text">Menu</h5>
+                      <ul>
+                          <li ui-sref="home">Home</li>
+                          <li ui-sref="services">Services</li>
+                          <li ui-sref="facilities">Facilities</li>
+                          <li ui-sref="about">About</li>
+                          <li ui-sref="contact">Contact</li>
+                      </ul>
+                  </div>
+              </div>
+          </div>
+          <div class="footer-copyright">
+              <div class="container">
+                  © 2017 WillWin Services
+              </div>
+          </div>
+      </footer>
+      <script src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0/angular.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-materialize/0.2.1/angular-materialize.min.js"></script>
+      <script src="./dist/js/bundle.js"></script>
+  </body>
+</html>
