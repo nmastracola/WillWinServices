@@ -24,6 +24,12 @@ angular.module('willWin', ['ui.router', 'ui.materialize', 'angular.vertilize', '
     });
 
     $urlRouterProvider.otherwise('/');
+}).run(function ($rootScope, $state, $document, $stateParams) {
+    $rootScope.$state = $state;
+    $rootScope.$stateParams = $stateParams;
+    $rootScope.$on('$stateChangeSuccess', function () {
+        document.body.scrollTop = document.documentElement.scrollTop = 0;
+    });
 });
 'use strict';
 
@@ -167,12 +173,5 @@ angular.module('willWin').controller('serviceCtrl', function ($scope, $state, ma
 
 $(document).ready(function () {
     $('.button-collapse').sideNav({ closeOnClick: true });
-    $('.facilities').slick({
-        dots: true,
-        infinite: true,
-        speed: 500,
-        fade: true,
-        cssEase: 'linear'
-    });
 });
 //# sourceMappingURL=bundle.js.map
