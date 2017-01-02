@@ -5,13 +5,16 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
       <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-      <link rel="stylesheet" href="/styles/main.css"/>
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"/>
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick-theme.css" />
+      <link rel="stylesheet" href="styles/main.css"/>
     <title>WillWin Parent-Time Services</title>
   </head>
   <body>
+
       <nav class="navbar blue darken-4">
           <div class="nav-wrapper">
-              <a class="brand-logo center">
+              <a ui-sref="home" class="brand-logo center">
                   <svg width="195" height="40" xmlns="http://www.w3.org/2000/svg" viewBox="0 -10 195 50">
                          <g>
                           <text fill="#ffffff" font-size="19" stroke-opacity="0" stroke="#000000" font-family="Roboto, sans-serif" x="51" id="svg_3" y="27">WillWin Services</text>
@@ -55,11 +58,11 @@
                   <div class="col l4 offset-l2 s12">
                       <h5 class="white-text">Menu</h5>
                       <ul>
-                          <li ui-sref="home">Home</li>
-                          <li ui-sref="services">Services</li>
-                          <li ui-sref="facilities">Facilities</li>
-                          <li ui-sref="about">About</li>
-                          <li ui-sref="contact">Contact</li>
+                          <li class="menu" ui-sref="home">Home</li>
+                          <li class="menu" ui-sref="services">Services</li>
+                          <li class="menu" ui-sref="facilities">Facilities</li>
+                          <li class="menu" ui-sref="about">About</li>
+                          <li class="menu" ui-sref="contact">Contact</li>
                       </ul>
                   </div>
               </div>
@@ -70,11 +73,13 @@
               </div>
           </div>
       </footer>
-      <script src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
+      <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
       <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0/angular.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-materialize/0.2.1/angular-materialize.min.js"></script>
-      <script src="./dist/js/bundle.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-materialize/0.2.1/angular-materialize.js"></script>
+      <script src="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-slick-carousel/3.1.7/angular-slick.min.js"></script>
+      <script src="dist/js/bundle.js"></script>
   </body>
 </html>
