@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('willWin', ['ui.router', 'ui.materialize', 'angular.vertilize']).config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
+angular.module('willWin', ['ui.router', 'ui.materialize', 'angular.vertilize', 'slickCarousel']).config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
     $locationProvider.hashPrefix('');
     $stateProvider.state('home', {
         url: '/',
@@ -36,7 +36,33 @@ angular.module('willWin').controller('aboutCtrl', function ($scope, $state, main
 angular.module('willWin').controller('contactCtrl', function ($scope, $state, mainService) {});
 'use strict';
 
-angular.module('willWin').controller('facilCtrl', function ($scope, $state, mainService) {});
+angular.module('willWin').controller('facilCtrl', function ($scope, $state, mainService) {
+    $scope.slickConfig = {
+        // centerMode: true,
+        // centerPadding: '40px',
+        // slidesToShow: 1,
+        accessibility: true,
+        enabled: true,
+        arrows: true,
+        dots: true,
+        autoplay: false,
+        draggable: true,
+        cssEase: 'ease',
+        responsive: [{
+            breakpoint: 768,
+            settings: {
+                arrows: false,
+                centerMode: true
+            }
+        }, {
+            breakpoint: 480,
+            settings: {
+                arrows: false,
+                centerMode: true
+            }
+        }]
+    };
+});
 'use strict';
 
 angular.module('willWin').controller('homeCtrl', function ($scope, $state, mainService) {});
@@ -140,8 +166,13 @@ angular.module('willWin').controller('serviceCtrl', function ($scope, $state, ma
 'use strict';
 
 $(document).ready(function () {
-    $('.carousel.carousel-slider').carousel({ full_width: true, indicators: true });
     $('.button-collapse').sideNav({ closeOnClick: true });
-    $('.materialboxed').materialbox();
+    $('.facilities').slick({
+        dots: true,
+        infinite: true,
+        speed: 500,
+        fade: true,
+        cssEase: 'linear'
+    });
 });
 //# sourceMappingURL=bundle.js.map
